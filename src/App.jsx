@@ -1,16 +1,21 @@
-import './App.css';
+import NavBarContainer from './Components/NavBarContainer'
+import ItemListContainer from './Components/ItemListContainer'
+import ItemDetailContainer from './Components/ItemDetailContainer'
+import { BrowserRouter, Routes, Route } from 'react-router'
 
-import NavBar from './components/NavBar'
-import Parrafo from './components/parrafo'
 
 function App() {
-  return (
-    <>
-      <NavBar />
-      <Parrafo text="hola mundo React" />
-  
-    </>
-  );
+
+  return ( 
+    <BrowserRouter>
+      <NavBarContainer />
+      <Routes>
+          <Route path='/' element={<ItemListContainer />}/>
+          <Route path='/category/:indice' element={<ItemListContainer/>} />
+          <Route path='/item/:id' element={<ItemDetailContainer/>} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App

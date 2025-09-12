@@ -1,0 +1,35 @@
+
+/* mobay  500px */
+
+.container {
+    margin-top: 10px;
+    padding: 10px;
+    border: 8px solid #b8f2fc;
+    border-radius: 8px;
+}
+
+.imagen {
+    width: 75%;
+    height: 90%;
+    box-shadow: 0 0 15px 5px rgba(2, 126, 203, 0.6);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+    margin-bottom: 5%;
+}
+
+.descripcion {
+    font-size: 16px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.precio {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}

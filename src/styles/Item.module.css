@@ -1,0 +1,22 @@
+
+/* mobay  500px */
+
+.producto{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4%;
+}
+
+
+.carta{
+    width: 24rem;
+    height: 100%;
+    border: 5% solid rgb(0, 56, 121);
+    box-shadow: 7px 7px 15px rgba(2, 126, 203, 0.6);
+}
+
+
+.imagen{
+    height: 50%;
+    width: auto;
+}

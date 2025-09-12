@@ -1,22 +1,40 @@
-import CarWidget from './CarWidget';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import CartWidget from './Cartwidget'
+import {NavLink} from 'react-router';
 
-function NavBar() {
-    return (
-        <nav>
+function NavBar ({categories}) {
 
-            <ul>
-
-                <li>Zapatillas</li>
-                <li>Ropa Deportiva</li>
-                <li>Mayas</li>
-                <li>Bolsos</li>
-                <li>Artículos de Deporte</li>
-                <CarWidget />
-
-            </ul>
-            
-        </nav>
-    );
+  return (
+    <Navbar expand="lg" >
+      <Container >
+        <Navbar.Brand href="#home">Guardarropas 🏪 </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <NavDropdown title="Categorias" id="basic-nav-dropdown">
+              {categories.map((category) => (
+                <NavDropdown.Item 
+                    as={NavLink} 
+                    to={`/category/${category}`} 
+                    key={category}
+                    style={({isActive}) => ({
+                      fontWeight: isActive ? 'bold' : 'normal',
+                      color: isActive ? 'while' : 'black-500' ,
+                    })}
+                  >
+                  {category}
+                </NavDropdown.Item>
+              ))}
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+        <CartWidget/>
+      </Container>
+    </Navbar>
+  );
 }
 
-export default NavBar
+export default NavBar;
