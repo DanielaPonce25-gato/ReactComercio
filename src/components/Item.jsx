@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
-import { useNavigate } from 'react-router'
+import { useNavigate } from 'react-router-dom' 
 import styles from '../styles/Item.module.css'
 
 function Item ({ item }) {
