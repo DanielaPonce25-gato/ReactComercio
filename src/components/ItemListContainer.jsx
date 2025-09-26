@@ -7,7 +7,7 @@ const ItemListWithLoading = withLoading(ItemList)
 
 function ItemListContainer() {
     const [items, setItems] = useState([])
-    const {indice} = useParams() 
+    const {id} = useParams() 
 
 
     useEffect(() => {
@@ -28,9 +28,9 @@ function ItemListContainer() {
         */
 
         const Productos = 'https://dummyjson.com/products' //url de la api de productos. 
-        const Categoria = `https://dummyjson.com/products/category/${indice}` //url de la api de productos por categoria.
+        const Categoria = `https://dummyjson.com/products/category/${id}` //url de la api de productos por categoria.
 
-        fetch(indice ? Categoria : Productos) // Pido los productos a la api.
+        fetch(id ? Categoria : Productos) // Pido los productos a la api.
         .then(res => res.json())
         .then(data => {
             setTimeout(() =>{
@@ -38,7 +38,7 @@ function ItemListContainer() {
             }, 3000)
         })
 
-    },[indice])
+    },[id])
 
 
     return (

@@ -1,6 +1,7 @@
 import NavBarContainer from './components/NavBarContainer'
 import ItemListContainer from './components/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer'
+import CartContainer from './Components/CartContainer'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 
@@ -10,8 +11,9 @@ return (
 <NavBarContainer />
 <Routes>
 <Route path='/' element={<ItemListContainer />}/>
-<Route path='/category/:indice' element={<ItemListContainer/>} />
+<Route path='/category/:id' element={<ItemListContainer/>} />
 <Route path='/item/:id' element={<ItemDetailContainer/>} />
+<Route path='/cart' element={<CartContainer/>} />
 
 {/* Ruta de fallback para evitar pantalla en blanco */}
 <Route path='*' element={<h2>Página no encontrada ❌</h2>} />

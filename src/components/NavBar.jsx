@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom'
 function NavBar ({categories}) {
 
   return (
-    <Navbar expand="lg" >
+    <Navbar expand="lg" className="bg-body-tertiary">
       <Container >
         <Navbar.Brand href="#home">Guardarropas 🏪 </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
