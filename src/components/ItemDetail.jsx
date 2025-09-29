@@ -10,10 +10,10 @@ function ItemDetail({item}) {
         <Container  className={styles.container}>
             <Row>
                 <Col md={4}>
-                    <Image src={item?.thumbnail}  className={styles.imagen}/>
+                    <Image src={item?.image}  className={styles.imagen}/>
                 </Col>
                 <Col>
-                    <h2>{item?.title}</h2>
+                    <h2>{item?.name}</h2>
                     <p className={styles.descripcion}>{item?.description}</p>
                     <h3 className={styles.precio}>${item?.price}</h3>
                     <ItemCounter item={item}/>

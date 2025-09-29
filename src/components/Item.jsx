@@ -10,9 +10,9 @@ function Item ({ item }) {
   return (
     <Col lg={3} md={6} className={styles.producto}>
       <Card className={styles.carta}>
-        <Card.Img variant="top" src={item.thumbnail} className={styles.imagen} />
+        <Card.Img variant="top" src={item.image} className={styles.imagen} />
         <Card.Body>
-          <Card.Title>{item.title} </Card.Title>
+          <Card.Title>{item.name} </Card.Title>
           <Card.Text>
             {item.category}
           </Card.Text>

@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
+import { getCategories } from '../firebase/db';
 import NavBar from './NavBar';
 
 function NavBarContainer () {
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
-        fetch('https://dummyjson.com/products/category-list')
-        .then(res => res.json())
-        .then(data => setCategories(data));
+       getCategories()
+       .then(data => setCategories(data))
     }, [])
 
     // se lo pasa a la NavBar 
