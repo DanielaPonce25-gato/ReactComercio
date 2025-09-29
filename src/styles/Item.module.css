@@ -8,15 +8,153 @@
 }
 
 
+
 .carta{
-    width: 24rem;
-    height: 100%;
-    border: 5% solid rgb(0, 56, 121);
+    width: 55%;
     box-shadow: 7px 7px 15px rgba(2, 126, 203, 0.6);
 }
 
+.titulo {
+    font-family: cursive;
+}
+
+.categoria {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(15, 161, 174);
+    font-weight: 900;
+}
 
 .imagen{
-    height: 50%;
+    height: 430px;
     width: auto;
 }
+
+
+/* celular  330px  a 499px*/
+
+@media (min-width: 330px) and (max-width: 499px) {
+
+    .producto{
+        padding-top: 5%;
+    }
+
+    .carta{
+        width: 70%;
+    }
+
+    .categoria {
+        font-size: 19px;
+    }
+
+    .imagen{
+        height: 450px;
+    }
+}
+
+
+/* tablet  501px  a 600px*/
+
+@media (min-width: 501px) and (max-width: 600px) {
+
+    .producto{
+        padding-top: 4%;
+    }
+
+    .carta{
+        width: 70%;
+    }
+
+    .titulo {
+        text-align: center;
+    }
+
+    .categoria {
+        font-size: 23px;
+    }
+
+    .imagen{
+        height: 500px;
+    }
+}
+
+
+/*  tablet  601px  a 800px*/
+
+@media (min-width: 601px) and (max-width: 800px) {
+
+    .producto{
+        padding-top: 4%;
+        width: 60%;
+        
+    }
+
+    .carta{
+        width: 80%;
+    }
+
+    .categoria {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+
+    .imagen{
+        height: 540px;
+    }
+} 
+
+
+/*  tablet  801px  a 900px*/
+
+@media (min-width: 801px) and (max-width:900px) {
+
+    .producto{
+        padding-top: 3%;
+        width: 90%;
+    }
+
+    .carta{
+        width: 80%;
+        margin-left: 20%;
+    }
+
+    .categoria {
+        font-size: 27px;
+        margin-left: 10px;
+    }
+
+    .imagen{
+        height: 700px;
+    }
+}
+
+
+
+/*  tablet  901px  a 1200px*/
+
+@media (min-width: 901px) and (max-width:1200px) {
+
+    .producto{
+        padding-top: 3%;
+        width: 100%;
+    }
+
+    .carta{
+        width: 95%;
+        margin-left: 9%;
+    }
+
+    .categoria {
+        font-size: 22px;
+        margin-left: 10px;
+    }
+
+    .imagen{
+        height: 700px;
+    }
+}
+
+
+
+/* escritorio  1201px  a 1300px*/
+

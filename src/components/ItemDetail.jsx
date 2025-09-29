@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import ItemCounter from "./ItemCounter";
-import styles from '../styles/DetailContainer.module.css'
+import styles from '../styles/ItemDetail.module.css'
 
 function ItemDetail({item}) {
     return (

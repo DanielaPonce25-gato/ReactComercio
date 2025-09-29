@@ -12,8 +12,8 @@ function Item ({ item }) {
       <Card className={styles.carta}>
         <Card.Img variant="top" src={item.image} className={styles.imagen} />
         <Card.Body>
-          <Card.Title>{item.name} </Card.Title>
-          <Card.Text>
+          <Card.Title className={styles.titulo}>{item.name} </Card.Title>
+          <Card.Text className={styles.categoria}>
             {item.category}
           </Card.Text>
           <Button onClick={() => navigate (`/item/${item.id}`)}>
