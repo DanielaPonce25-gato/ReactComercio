@@ -8,6 +8,7 @@ function CartWidget() {
   const { getQuantity } = useContext((CartContext))
   const quantity = getQuantity()
   const navigate = useNavigate()
+  
 
   return (
     <Button variant="dark" onClick={() => navigate('/cart')}>

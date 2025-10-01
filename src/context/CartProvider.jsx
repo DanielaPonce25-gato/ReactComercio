@@ -6,17 +6,43 @@ function CartProvider ({children}) {
     const [cart, setCart] = useState([])
 
     const addToCart = item => {
+        const isInCart = cart.some(prod => prod.id === item.id)
 
-        // Para que no agarre productos repetitivos
-
-        if (cart.some(prod => prod.id === item.id)){
+        if (isInCart) {
             return
         }
-
-        // una funcion que me agregue objetos al carrito
-
+    
         setCart([...cart, item])
     }
+
+    const removerCart = (id) => {
+        setCart(cart.filter((item) => item.id !== id));
+    };
+
+    const clearCart = () => {
+       setCart([]);  // vacía el carrito completamente
+    };
+
+
+    // Aumentar cantidad de un producto
+    const increQuantity = (id) => {
+        setCart(
+            cart.map((item) =>
+                item.id === id ? { ...item, count: item.count + 1 } : item
+            )
+        );
+    };
+
+    // Disminuir cantidad de un producto
+    const decreQuantity = (id) => {
+        setCart(
+            cart.map((item) =>
+                item.id === id && item.count > 1
+                ? { ...item, count: item.count - 1 }
+                : item
+            )
+        );
+    };
 
     const getQuantity = () => {
         const quantities = cart.map(item => item.count)
@@ -33,7 +59,16 @@ function CartProvider ({children}) {
     }
 
     return(
-        <CartContext.Provider value={{ addToCart, getQuantity, cart, getTotal}}>
+        <CartContext.Provider value={{ 
+            addToCart, 
+            getQuantity, 
+            cart, 
+            getTotal, 
+            clearCart , 
+            removerCart, 
+            increQuantity, 
+            decreQuantity
+        }}>
             {children}
         </CartContext.Provider>
     )

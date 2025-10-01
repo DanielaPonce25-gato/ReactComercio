@@ -4,11 +4,13 @@ import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { serverTimestamp } from 'firebase/firestore';
 import { createOrder } from '../firebase/db';
+import { useNavigate } from 'react-router-dom';
 
 function Checkout () {
-    const {getTotal, cart } = useContext(CartContext)
+    const { getTotal, cart, clearCart } = useContext(CartContext);
+    const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         const form = e.target
 
@@ -23,7 +25,12 @@ function Checkout () {
             date: serverTimestamp()
         }
 
-        createOrder(order)
+        const ok = await createOrder(order);
+
+        if (ok) {
+                clearCart();     
+                navigate('/');   
+        }
     }
 
     if (!cart.length) {

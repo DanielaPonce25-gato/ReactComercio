@@ -72,9 +72,20 @@ export const getItem = async (id) => {
 // agrega data a la base de datos 
 
 export const createOrder = async (order) => {
-    const docRef = await addDoc(collection(db, "orders"), order)
-    console.log("Document written with ID: ", docRef.id)
-}
+    try {
+        const docRef = await addDoc(collection(db, "orders"), order);
+        console.log("Document written with ID: ", docRef.id);
+
+        alert(`¡Tu orden se ha creado correctamente! ID: ${docRef.id}`);
+    
+        return true; 
+    } catch (error) {
+        console.error("Error al crear la orden: ", error);
+        alert("Hubo un error al crear tu orden. Intenta nuevamente.");
+        
+        return false; 
+    }
+};
 
 
 
