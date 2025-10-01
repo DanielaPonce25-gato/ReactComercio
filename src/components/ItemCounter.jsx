@@ -1,7 +1,7 @@
 import { useState , useContext} from "react";
 import { CartContext } from "../context/CartContext";
 import Button from 'react-bootstrap/Button';
-import styles from "../styles/Counter.module.css"
+import styles from "../styles/ItemCounter.module.css"
 
 
 function ItemCounter({item}) {

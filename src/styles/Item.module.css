@@ -150,11 +150,55 @@
     }
 
     .imagen{
-        height: 700px;
+        height: 600px;
     }
 }
 
 
 
-/* escritorio  1201px  a 1300px*/
+/* escritorio  1201px  a 1400px*/
+
+@media (min-width: 1201px) and (max-width:1400px) {
+
+    .producto{
+        padding-top: 1%;
+        padding-right: 1%;
+        width: 100%;
+    }
+
+    .carta{
+        width: 100%;
+        margin-left: 10%;
+    }
+
+    .categoria {
+        font-size: 22px;
+        margin-left: 10px;
+    }
+
+    .imagen{
+        height: 500px;
+    }
+}
+
+
+/* escritorio  1401px  a 1600px*/
+
+@media (min-width: 1401px) and (max-width:1600px) {
+
+    .carta{
+        width: 200%;
+        margin-left: 5%;
+    }
+
+    .categoria {
+        font-size: 25px;
+        margin-left: 3px;
+    }
+
+    .imagen{
+        height: 550px;
+    }
+}
+
 

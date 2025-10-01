@@ -11,7 +11,7 @@ function NavBar ({categories}) {
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container >
         <Navbar.Brand as={Link} to={"/"}>
-          Guardarropas 🏪 
+          Picis 🐟
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
