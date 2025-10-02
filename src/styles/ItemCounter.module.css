@@ -1,4 +1,156 @@
+/* mobay  500px */
 
 .unidad {
-    font-size: 20px;
+    font-size: 25px;
+}
+
+.suma {
+    font-size: 90px;
+    margin-bottom: 4%;
+    width: 40px;
+    height: 40px;
+}
+
+.menos {
+    font-size: 80px;
+    margin-bottom: 4%;
+    width: 40px;
+    height: 40px;
+}
+
+.botoncarrito {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* celular  330px  a 499px*/
+
+@media (min-width: 330px) and (max-width: 499px) {
+
+    .unidad {
+        font-size: 20px;
+    }
+
+    .suma {
+        margin-right: 4%;
+        width: 35px;
+        height: 35px;
+    }
+
+    .menos {
+        width: 35px;
+        height: 35px;
+    }
+
+    .botoncarrito {
+        margin-bottom: 20px;
+    }
+}
+
+/* celular 501px  a 600px*/
+
+@media (min-width: 501px) and (max-width: 600px) {
+
+    .unidad {
+        font-size: 24px;
+    }
+
+    .botoncarrito {
+        margin-bottom: 30px;
+    }
+}
+
+/* tablet 601px  a 768px*/
+
+@media (min-width: 601px) and (max-width: 768px) {
+
+    .unidad {
+        font-size: 26px;
+    }
+
+    .suma {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menos {
+        width: 40px;
+        height: 40px;
+    }
+
+    .botoncarrito {
+        margin-bottom: 40px;
+    }
+}
+
+
+/* tablet 769px  a 1024px*/
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .unidad {
+        font-size: 28px;
+    }
+
+    .suma {
+        width: 45px;
+        height: 45px;
+    }
+
+    .menos {
+        width: 45px;
+        height: 45px;
+    }
+
+    .botoncarrito {
+        margin-bottom: 50px;
+    }
+}
+
+/* escritorio 1025px  a 1200px*/
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+
+    .unidad {
+        font-size: 32px;
+    }
+
+    .suma {
+        width: 50px;
+        height: 50px;
+    }
+
+    .menos {
+        width: 50px;
+        height: 50px;
+    }
+
+    .botoncarrito {
+        margin-bottom: 60px;
+    }
+}
+
+/* escritorio 1201px  a 1400px*/
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+
+    .unidad {
+        font-size: 36px;
+    }
+
+    .suma {
+        width: 55px;
+        height: 55px;
+    }
+
+    .menos {
+        width: 55px;
+        height: 55px;
+    }
+
+    .botoncarrito {
+        margin-bottom: 70px;
+    }
 }

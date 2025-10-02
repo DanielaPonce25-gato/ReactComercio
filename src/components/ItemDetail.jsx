@@ -9,11 +9,11 @@ function ItemDetail({item}) {
     return (
         <Container  className={styles.container}>
             <Row>
-                <Col md={4}>
+                <Col md={3}>
                     <Image src={item?.image}  className={styles.imagen}/>
                 </Col>
                 <Col>
-                    <h2>{item?.name}</h2>
+                    <h2 className={styles.titulo}>{item?.name}</h2>
                     <p className={styles.descripcion}>{item?.description}</p>
                     <h3 className={styles.precio}>${item?.price}</h3>
                     <ItemCounter item={item}/>

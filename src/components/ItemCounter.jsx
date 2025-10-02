@@ -18,15 +18,15 @@ function ItemCounter({item}) {
     return (
         <div>
             <p className={styles.unidad}>Unidad: {count}</p>
-            <Button onClick={handleAdd}  variant="info"  >+</Button>
-            <Button 
+            <Button className={styles.suma} onClick={handleAdd}  variant="info"  >+</Button>
+            <Button className={styles.menos}
                 onClick={handleSub}  
                 variant="dark" 
                 disabled={count === 0}
             >
                 -
             </Button>
-            <div style={{display: 'flex',justifyContent: 'flex-end', marginTop: '10px',marginBottom: '10px'}}>
+            <div className={styles.botoncarrito}>
                 <Button  onClick={handleAddToCart}>
                     Agregar al carrito
                 </Button>

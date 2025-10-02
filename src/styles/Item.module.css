@@ -182,23 +182,6 @@
 }
 
 
-/* escritorio  1401px  a 1600px*/
 
-@media (min-width: 1401px) and (max-width:1600px) {
-
-    .carta{
-        width: 200%;
-        margin-left: 5%;
-    }
-
-    .categoria {
-        font-size: 25px;
-        margin-left: 3px;
-    }
-
-    .imagen{
-        height: 550px;
-    }
-}
 
 

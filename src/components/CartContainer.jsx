@@ -3,6 +3,7 @@ import { CartContext } from "../context/CartContext"
 import { useNavigate } from "react-router"
 import { ListGroup } from "react-bootstrap"
 import Button from "react-bootstrap/Button"
+import styles from "../styles/CartContainer.module.css"
 
 function CartContainer () {
     const { 
@@ -24,7 +25,7 @@ function CartContainer () {
     }
 
     return (
-        <div className='d-flex flex-column mt-5 align-items-center'>
+        <div className={styles.conteiner}>
             <ListGroup className='w-50'>
                 {cart.map(item => (
                     <ListGroup.Item 
