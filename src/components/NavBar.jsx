@@ -3,12 +3,12 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import CartWidget from './Cartwidget'
-import { NavLink, Link} from 'react-router-dom'
+import { NavLink, Link} from 'react-router'
 
 function NavBar ({categories}) {
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="w-%100">
       <Container >
         <Navbar.Brand as={Link} to={"/"}>
           Picis 🐟

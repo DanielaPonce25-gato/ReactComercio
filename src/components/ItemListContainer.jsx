@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import ItemList from './ItemList'
 import { withLoading } from '../hoc/withLoading'
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router'
 import { getItems, getItemsByCategory } from '../firebase/db'
 
 

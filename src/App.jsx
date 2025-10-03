@@ -3,7 +3,7 @@ import ItemListContainer from './components/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer'
 import CartContainer from './components/CartContainer'
 import Checkout from './components/Checkout'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router"
 
 
 function App() {

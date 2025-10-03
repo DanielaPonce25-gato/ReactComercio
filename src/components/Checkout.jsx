@@ -4,7 +4,8 @@ import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { serverTimestamp } from 'firebase/firestore';
 import { createOrder } from '../firebase/db';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
+import styles from "../styles/Checkout.module.css"
 
 function Checkout () {
     const { getTotal, cart, clearCart } = useContext(CartContext);

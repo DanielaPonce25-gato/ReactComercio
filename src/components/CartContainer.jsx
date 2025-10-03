@@ -20,39 +20,37 @@ function CartContainer () {
 
     if (cart.length === 0) {
         return (
-            <div>No tienes productos en el carrito</div>
+            <div className={styles.mensaje}>No tienes productos en el carrito</div>
         )
     }
 
     return (
         <div className={styles.conteiner}>
-            <ListGroup className='w-50'>
+            <ListGroup className={styles.carrito}>
                 {cart.map(item => (
-                    <ListGroup.Item 
+                    <ListGroup.Item className={styles.productos}
                         key={item.id} 
-                        className="d-flex justify-content-between align-items-center"
+                        
                     >
-                        <div>
+                        <div className={styles.producto}>
                             {item.name} x {item.count} = ${item.price * item.count}
                         </div>
-                        <div className="d-flex gap-2">
-                            <Button 
-                                variant="success" 
-                                size="sm" 
+                        <div className={styles.botones}>
+                            <Button className={styles.boton}
+                                variant="info"
                                 onClick={() => increQuantity(item.id)}
                             >
                                 +
                             </Button>
-                            <Button 
-                                variant="warning" 
-                                size="sm" 
+                            <Button className={styles.boton}
+                                variant="secondary" 
                                 onClick={() => decreQuantity(item.id)}
                             >
                                 -
                             </Button>
-                            <Button 
+                            <Button className={styles.eliminar} 
                                 variant="danger" 
-                                size="sm" 
+                                size="ms" 
                                 onClick={() => removerCart(item.id)}
                             >
                                 Eliminar
@@ -62,9 +60,9 @@ function CartContainer () {
                 ))}
             </ListGroup>
 
-            <h2 className="mt-3">Subtotal: ${total}</h2>
+            <h2 className={styles.subtotal}>Subtotal: ${total}</h2>
 
-            <div className="d-flex flex-column gap-2 w-50 mt-4">
+            <div className={styles.botonesFinales}>
                 <Button 
                     variant="primary" 
                     onClick={() => navigate('/checkout')}
