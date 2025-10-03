@@ -181,7 +181,29 @@
     }
 }
 
+/* escritorio  1401px  a 1600px*/
+@media (min-width: 1401px) and (max-width:1600px) {
 
+    .producto{
+        padding-top: 1%;
+        padding-right: 1%;
+        width: 100%;
+    }
+
+    .carta{
+        width: 100%;
+        margin-left: 10%;
+    }
+
+    .categoria {
+        font-size: 22px;
+        margin-left: 10px;
+    }
+
+    .imagen{
+        height: 550px;
+    }
+}
 
 
 

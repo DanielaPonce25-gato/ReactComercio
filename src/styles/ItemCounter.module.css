@@ -154,3 +154,26 @@
         margin-bottom: 70px;
     }
 }
+
+/* escritorio 1401px  a 1600px*/
+
+@media (min-width: 1401px) and (max-width: 1600px) {
+
+    .unidad {
+        font-size: 40px;
+    }
+
+    .suma {
+        width: 60px;
+        height: 60px;
+    }
+
+    .menos {
+        width: 60px;
+        height: 60px;
+    }
+
+    .botoncarrito {
+        margin-bottom: 80px;
+    }
+}
